@@ -11,11 +11,11 @@ class MyDocument extends Document {
       <Html lang="fa">
         <Head>
           <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-          <link
+          {/* <link
             href="http://www.fontonline.ir/css/IranNastaliq.css"
             rel="stylesheet"
             type="text/css"
-          />
+          /> */}
         </Head>
         <body>
           <Main />

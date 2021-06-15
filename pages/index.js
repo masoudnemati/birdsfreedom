@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>آزادی پرندگان</title>
         <meta name="description" content="حق آزادی پرندگان" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

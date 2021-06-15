@@ -26,7 +26,6 @@ const Hero = () => {
 
         video {
           position: fixed;
-
           z-index: -9999;
         }
 
@@ -38,6 +37,7 @@ const Hero = () => {
         }
 
         .hero-des {
+          box-sizing: content-box;
           height: 100vh;
           display: flex;
           flex-direction: row;
@@ -57,6 +57,16 @@ const Hero = () => {
           video {
             width: auto;
             height: 100%;
+          }
+        }
+
+        @media only screen and (max-width: 970px) {
+          .hero-des {
+            flex-direction: column;
+          }
+
+          h1 {
+            margin-top: 40vh;
           }
         }
       `}</style>
