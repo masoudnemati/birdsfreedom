@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Hero = () => {
+  useEffect(() => {
+    // The code inside useEffect is only executed on the client (in the browser), thus it has access to window.
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }, []);
+
   return (
     <>
-      <video autoPlay="true" muted playsinline loop>
-        <source src="/home/fly.webm" type="video/webm" />
+      <video
+        autoPlay={true}
+        controlsList="nodownload"
+        muted
+        playsInline
+        loop
+        disablePictureInPicture={true}
+      >
+        <source src="/home/fly.mp4" type="video/mp4" />
         Sorry, your browser doesn't support embedded videos.
       </video>
       <section className="hero-des">
         <h1>پرندگان به آسمان تعلق دارند</h1>
-        <img src="/home/caged-bird.jpg" alt="پرنده در قفس" />
+        <img src="/home/caged-bird.webp" alt="پرنده در قفس" />
       </section>
 
       <style jsx>{`
@@ -22,6 +35,8 @@ const Hero = () => {
           text-align: center;
           background-color: rgba(255, 255, 255, 0.5);
           font-family: IranNastaliq, "IranNastaliq", tahoma;
+          font-weight: bold;
+          font-style: normal;
         }
 
         video {
@@ -34,11 +49,12 @@ const Hero = () => {
           height: auto;
           box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
             rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+          border-top-right-radius: 5%;
         }
 
         .hero-des {
           box-sizing: content-box;
-          height: 100vh;
+          height: calc(var(--vh, 1vh) * 100);
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;

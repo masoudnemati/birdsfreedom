@@ -46,6 +46,10 @@ th {
   font-size: clamp(1rem, 1.2vw, 1.2rem);
 }
 
+li {
+  list-style: arabic-indic;
+}
+
 @font-face {
   font-family: IranNastaliq;
   src: url(/font/IranNastaliq.ttf);
