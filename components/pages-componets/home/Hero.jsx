@@ -23,10 +23,15 @@ const Hero = () => {
       </video>
       <section className="hero-des" id="hero">
         <h1>پرندگان به آسمان تعلق دارند</h1>
-        <img src="/home/caged-bird.webp" alt="پرنده در قفس" />
-        <a href="#freedom">
-          <Down />
-        </a>
+        {/* <img src="/home/caged-bird.webp" alt="پرنده در قفس" /> */}
+        <div className="reasons-hero">
+          <a href="#freedom">
+            <span className="down-icon">
+              <Down />
+            </span>
+            <p>۵ دلیل تا پرندگان را در قفس نگه نداریم:</p>
+          </a>
+        </div>
       </section>
 
       <style jsx>{`
@@ -35,12 +40,23 @@ const Hero = () => {
           margin: 0;
           width: 100%;
           justify-content: center;
-          align-items: center;
           text-align: center;
-          background-color: rgba(255, 255, 255, 0.5);
+          color: white;
+          /* background-color: rgba(255, 255, 255, 0.5); */
           font-family: IranNastaliq, "IranNastaliq", tahoma;
           font-weight: bold;
           font-style: normal;
+          text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04),
+            3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04),
+            0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04),
+            7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04),
+            9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04),
+            11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04),
+            13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04),
+            0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04),
+            17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04),
+            19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+          font-size: clamp(5.4rem, 2.5vw, 8.4rem);
         }
 
         video {
@@ -57,30 +73,42 @@ const Hero = () => {
         }
 
         .hero-des {
-          box-sizing: content-box;
           height: calc(var(--vh, 1vh) * 100);
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           flex-wrap: nowrap;
-          justify-content: space-between;
-          align-items: flex-end;
+          justify-content: center;
+          align-items: center;
         }
 
         a {
-          position: absolute;
-          right: 5vw;
-          bottom: 5%;
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          background-color: rgba(0, 0, 0, 0.4);
-          border-radius: 50%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          height: 4rem;
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0.9);
+          border-radius: 5rem;
+          background-color: rgba(37, 60, 88, 0.9);
           box-shadow: rgba(222, 222, 230, 0.15) 0px 30px 60px -12px inset,
             rgba(238, 234, 234, 0.2) 0px 18px 36px -18px inset;
           transition: all 0.3s linear;
         }
 
+        a p {
+          padding: 0.5rem 0 0.5rem 1rem;
+          font-size: clamp(1rem, 2.5vw, 1.4rem);
+        }
+
         a:hover {
           box-shadow: rgba(234, 234, 240, 0.3) 0px 30px 60px -12px inset,
             rgba(252, 249, 249, 0.4) 0px 18px 36px -18px inset;
+        }
+
+        .down-icon {
+          padding-right: 0.5rem;
         }
 
         @media (min-aspect-ratio: 16/9) {
@@ -100,14 +128,6 @@ const Hero = () => {
         @media only screen and (max-width: 1000px) {
           .hero-des {
             flex-direction: column;
-          }
-
-          h1 {
-            margin-top: 40vh;
-          }
-
-          a {
-            right: 50%;
           }
         }
       `}</style>

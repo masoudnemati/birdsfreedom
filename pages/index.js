@@ -196,9 +196,10 @@ export default function Home() {
           position: absolute;
           right: 5vw;
           border: 1px solid rgba(255, 255, 255, 0.9);
+          background-color: rgba(0, 0, 0, 0.2);
           border-radius: 50%;
-          box-shadow: rgba(222, 222, 230, 0.15) 0px 30px 60px -12px inset,
-            rgba(238, 234, 234, 0.2) 0px 18px 36px -18px inset;
+          box-shadow: rgba(222, 222, 230, 0.1) 0px 30px 60px -12px inset,
+            rgba(238, 234, 234, 0.05) 0px 18px 36px -18px inset;
           transition: all 0.3s linear;
         }
 
@@ -214,7 +215,6 @@ export default function Home() {
         a:hover {
           box-shadow: rgba(222, 222, 230, 0.3) 0px 30px 60px -12px inset,
             rgba(238, 234, 234, 0.4) 0px 18px 36px -18px inset;
-          border: 1px solid rgba(0, 0, 0, 0.9);
         }
 
         .reasons-header {
