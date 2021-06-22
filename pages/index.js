@@ -149,6 +149,63 @@ export default function Home() {
           <a className="top" href="#together">
             <Down />
           </a>
+          <a className="bottom" href="#defence">
+            <Down />
+          </a>
+        </section>
+        <section className="defence" id="defence">
+          <div>
+            <p className="title">
+              <span className="title-name">
+                <b>چگونگی دفاع از حق آزادی پرندگان:</b>
+              </span>
+            </p>
+            <p>
+              یکی از کارهایی که می‌توانید انجام دهید
+              <b> نخریدن </b>
+              پرندگان و مطلع کردن دیگران از طبیعت ذاتی پرندگان است. متاسفانه
+              اکثر پرنده‌هایی که تمام عمر خود را در قفس بوده‌اند مهارت لازم برای
+              زنده ماندن در طبیعت را ندارند.
+            </p>
+          </div>
+          <img src="/home/caged-bird.webp" alt="پرنده در قفس" />
+          <a className="top" href="#memory">
+            <Down />
+          </a>
+          <a className="bottom" href="#footer">
+            <Down />
+          </a>
+        </section>
+        <section className="footer" id="footer">
+          <div>
+            <a
+              className="footer-link atyal-link"
+              href="https://atyal.ir/"
+              target="_blank"
+              title="link to atyal.ir website"
+              rel="noopener noreferrer"
+            >
+              <p>
+                Web Design by
+                <span className="atyal-name"> Atyal.ir</span>
+              </p>
+            </a>
+            <a
+              className="footer-link weekend-link"
+              href="https://www.instagram.com/artofweekend/"
+              target="_blank"
+              title="link to art of weekend instagram"
+              rel="noopener noreferrer"
+            >
+              <p className="weekend">
+                With Special Thanks to
+                <span className="weekend-name"> Art of Weekend</span>
+              </p>
+            </a>
+          </div>
+          <a className="top" href="#defence">
+            <Down />
+          </a>
         </section>
       </div>
 
@@ -170,6 +227,7 @@ export default function Home() {
         section:not(:first-of-type) {
           display: flex;
           align-items: center;
+          justify-content: space-between;
           position: relative;
         }
 
@@ -192,7 +250,7 @@ export default function Home() {
           padding: 0 7vw;
         }
 
-        a {
+        a:not(.footer-link) {
           position: absolute;
           right: 5vw;
           border: 1px solid rgba(255, 255, 255, 0.9);
@@ -212,7 +270,7 @@ export default function Home() {
           bottom: 5%;
         }
 
-        a:hover {
+        a:not(.footer-link):hover {
           box-shadow: rgba(222, 222, 230, 0.3) 0px 30px 60px -12px inset,
             rgba(238, 234, 234, 0.4) 0px 18px 36px -18px inset;
         }
@@ -249,6 +307,48 @@ export default function Home() {
           background-color: #030a02;
         }
 
+        .defence {
+          color: #fefefe;
+          background-color: #353535;
+        }
+
+        .footer {
+          color: #fafbfb;
+          background-color: #242433;
+          direction: ltr;
+        }
+
+        .atyal-link p {
+          font-size: clamp(1.5rem, 2vw, 2.4rem);
+          border: 1px solid rgba(255, 255, 255, 0);
+        }
+
+        .atyal-name {
+          color: #bcbcec;
+          font-family: "Audiowide", cursive;
+          font-weight: bolder;
+        }
+
+        .weekend-link {
+          color: rgba(243, 247, 247, 0.7);
+          font-size: clamp(1.1rem, 1.2vw, 1.5rem);
+        }
+
+        .weekend-link p {
+          border: 1px solid rgba(255, 255, 255, 0);
+        }
+
+        .weekend-name {
+          color: rgba(161, 161, 226, 0.95);
+          font-family: "Audiowide", cursive;
+          font-weight: bolder;
+        }
+
+        .atyal-link:hover p,
+        .weekend-link:hover p {
+          border: 1px solid white;
+        }
+
         img {
           width: clamp(300px, 50vw, 900px);
         }
@@ -263,7 +363,7 @@ export default function Home() {
             width: 100%;
           }
 
-          a {
+          a:not(.footer-link) {
             right: 44vw;
           }
         }

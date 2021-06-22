@@ -15,7 +15,12 @@ class MyDocument extends Document {
             rel="stylesheet"
             type="text/css"
           />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <link
+            href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+            rel="stylesheet"
+          />
+
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 
           {/* <link
