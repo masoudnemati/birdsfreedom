@@ -56,21 +56,21 @@ const Hero = () => {
             0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04),
             17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04),
             19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
-          font-size: clamp(5.4rem, 2.5vw, 8.4rem);
+          font-size: clamp(3rem, 8vw, 8.4rem);
         }
 
         video {
           position: fixed;
           z-index: -9999;
         }
-
+        /* 
         img {
           width: clamp(250px, 50vw, 500px);
           height: auto;
           box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
             rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
           border-top-right-radius: 5%;
-        }
+        } */
 
         .hero-des {
           height: calc(var(--vh, 1vh) * 100);

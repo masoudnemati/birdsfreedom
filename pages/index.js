@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import Hero from "../components/pages-componets/home/Hero";
 import Down from "../components/svg/Down";
+import Image from "next/image";
+
+import BlueBird from "../public/home/bird-flying-blue.webp";
 
 export default function Home() {
   useEffect(() => {
@@ -50,7 +53,7 @@ export default function Home() {
               پرنده دعوا کنند و به کدام پرنده عشق بورزند. */}
             </p>
           </div>
-          <img src="/home/bird-flying-blue.jpg" alt="پرنده آزاد" />
+          <img src="/home/bird-flying-blue.webp" alt="پرنده" />
           <a className="top" href="#hero">
             <Down />
           </a>
@@ -73,7 +76,7 @@ export default function Home() {
               ظالمانه است.
             </p>
           </div>
-          <img src="/home/owl-flying.jpg" alt="پرنده آزاد" />
+          <img src="/home/owl-flying.webp" alt="پرنده آزاد" />
           <a className="top" href="#freedom">
             <Down />
           </a>
@@ -98,7 +101,7 @@ export default function Home() {
               به آن‌ها باعث از بین رفتن حس شکار در آن‌ها می‌شود.
             </p>
           </div>
-          <img src="/home/birds-hunt.jpg" alt="پرنده آزاد" />
+          <img src="/home/birds-hunt.webp" alt="پرنده آزاد" />
           <a className="top" href="#fly">
             <Down />
           </a>
@@ -122,7 +125,7 @@ export default function Home() {
               می‌شود.
             </p>
           </div>
-          <img src="/home/birds-together2.jpg" alt="پرنده آزاد" />
+          <img src="/home/birds-together2.webp" alt="پرنده آز اد" />
           <a className="top" href="#hunt">
             <Down />
           </a>
@@ -145,7 +148,7 @@ export default function Home() {
               پرندگان بی‌گناه را شکنجه می‌کنید.
             </p>
           </div>
-          <img src="/home/red-bird.jpg" alt="پرنده آزاد" />
+          <img src="/home/red-bird.webp" alt="پرنده آزاد" />
           <a className="top" href="#together">
             <Down />
           </a>
@@ -168,7 +171,11 @@ export default function Home() {
               زنده ماندن در طبیعت را ندارند.
             </p>
           </div>
-          <img src="/home/caged-bird.webp" alt="پرنده در قفس" />
+          <img
+            className="next-image"
+            src="/home/caged-bird.webp"
+            alt="پرنده در قفس"
+          />
           <a className="top" href="#memory">
             <Down />
           </a>
@@ -224,6 +231,10 @@ export default function Home() {
           scroll-behavior: smooth;
         }
 
+        section + div {
+          width: 500vw;
+        }
+
         section:not(:first-of-type) {
           display: flex;
           align-items: center;
@@ -235,6 +246,10 @@ export default function Home() {
           padding: 0 5vw;
           text-align: center;
           margin: 0;
+        }
+
+        img {
+          width: clamp(300px, 50vw, 900px);
         }
 
         .title {
@@ -252,7 +267,7 @@ export default function Home() {
 
         a:not(.footer-link) {
           position: absolute;
-          right: 5vw;
+          bottom: 5%;
           border: 1px solid rgba(255, 255, 255, 0.9);
           background-color: rgba(0, 0, 0, 0.2);
           border-radius: 50%;
@@ -262,12 +277,12 @@ export default function Home() {
         }
 
         .top {
-          top: 5%;
+          right: 5vw;
           transform: rotate(180deg);
         }
 
         .bottom {
-          bottom: 5%;
+          right: 10vw;
         }
 
         a:not(.footer-link):hover {
@@ -315,6 +330,10 @@ export default function Home() {
         .footer {
           color: #fafbfb;
           background-color: #242433;
+          background-image: url("/icons/mountains.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center bottom;
           direction: ltr;
         }
 
@@ -347,10 +366,8 @@ export default function Home() {
         .atyal-link:hover p,
         .weekend-link:hover p {
           border: 1px solid white;
-        }
-
-        img {
-          width: clamp(300px, 50vw, 900px);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
         }
 
         @media only screen and (max-width: 1000px) {
@@ -363,8 +380,12 @@ export default function Home() {
             width: 100%;
           }
 
-          a:not(.footer-link) {
-            right: 44vw;
+          .top {
+            right: 5rem;
+          }
+
+          .bottom {
+            right: 10rem;
           }
         }
       `}</style>
