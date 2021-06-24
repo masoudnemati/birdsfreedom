@@ -210,6 +210,7 @@ export default function Home() {
               </p>
             </a>
           </div>
+          <img src="/home/bird-skyblue.webp" alt="پرنده آزاد" />
           <a className="top" href="#defence">
             <Down />
           </a>
@@ -277,12 +278,12 @@ export default function Home() {
         }
 
         .top {
-          right: 5vw;
+          right: 10vw;
           transform: rotate(180deg);
         }
 
         .bottom {
-          right: 10vw;
+          right: 5vw;
         }
 
         a:not(.footer-link):hover {
@@ -328,12 +329,8 @@ export default function Home() {
         }
 
         .footer {
-          color: #fafbfb;
-          background-color: #242433;
-          background-image: url("/icons/mountains.svg");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center bottom;
+          color: #404955;
+          background-color: #67b7f7;
           direction: ltr;
         }
 
@@ -343,13 +340,17 @@ export default function Home() {
         }
 
         .atyal-name {
-          color: #bcbcec;
+          color: #010103;
           font-family: "Audiowide", cursive;
           font-weight: bolder;
+          padding-right: 2rem;
+          background-image: url("/icons/bx-link-external.svg");
+          background-repeat: no-repeat;
+          background-position: right center;
         }
 
         .weekend-link {
-          color: rgba(243, 247, 247, 0.7);
+          color: #626d7c;
           font-size: clamp(1.1rem, 1.2vw, 1.5rem);
         }
 
@@ -358,9 +359,23 @@ export default function Home() {
         }
 
         .weekend-name {
-          color: rgba(161, 161, 226, 0.95);
+          color: #0c213fe6;
           font-family: "Audiowide", cursive;
           font-weight: bolder;
+          padding-right: 2rem;
+          background-image: url("/icons/bx-link-external.svg");
+          background-repeat: no-repeat;
+          background-position: right center;
+        }
+
+        .atyal-link p,
+        .weekend-link p {
+          padding: 1rem;
+          margin-left: 1rem;
+        }
+
+        .atyal-link p {
+          padding-right: 2rem;
         }
 
         .atyal-link:hover p,
@@ -381,11 +396,11 @@ export default function Home() {
           }
 
           .top {
-            right: 5rem;
+            right: 10rem;
           }
 
           .bottom {
-            right: 10rem;
+            right: 5rem;
           }
         }
       `}</style>
