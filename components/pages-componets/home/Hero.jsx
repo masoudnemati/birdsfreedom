@@ -89,7 +89,7 @@ const Hero = () => {
           align-items: center;
           height: 4rem;
           color: white;
-          border: 1px solid rgba(255, 255, 255, 0.9);
+          border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 5rem;
           background-color: rgba(37, 60, 88, 0.9);
           box-shadow: rgba(222, 222, 230, 0.15) 0px 30px 60px -12px inset,
